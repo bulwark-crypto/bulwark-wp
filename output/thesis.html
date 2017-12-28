@@ -1,0 +1,774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+                        <title></title>
+        <style type="text/css">code{white-space: pre;}</style>
+                            <style type="text/css">
+            div.sourceCode { overflow-x: auto; }
+            table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+              margin: 0; padding: 0; vertical-align: baseline; border: none; }
+            table.sourceCode { width: 100%; line-height: 100%; }
+            td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+            td.sourceCode { padding-left: 5px; }
+            code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+            code > span.dt { color: #902000; } /* DataType */
+            code > span.dv { color: #40a070; } /* DecVal */
+            code > span.bn { color: #40a070; } /* BaseN */
+            code > span.fl { color: #40a070; } /* Float */
+            code > span.ch { color: #4070a0; } /* Char */
+            code > span.st { color: #4070a0; } /* String */
+            code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+            code > span.ot { color: #007020; } /* Other */
+            code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+            code > span.fu { color: #06287e; } /* Function */
+            code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+            code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+            code > span.cn { color: #880000; } /* Constant */
+            code > span.sc { color: #4070a0; } /* SpecialChar */
+            code > span.vs { color: #4070a0; } /* VerbatimString */
+            code > span.ss { color: #bb6688; } /* SpecialString */
+            code > span.im { } /* Import */
+            code > span.va { color: #19177c; } /* Variable */
+            code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+            code > span.op { color: #666666; } /* Operator */
+            code > span.bu { } /* BuiltIn */
+            code > span.ex { } /* Extension */
+            code > span.pp { color: #bc7a00; } /* Preprocessor */
+            code > span.at { color: #7d9029; } /* Attribute */
+            code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+            code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+            code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+            code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+            </style>
+                                            <style>
+            body {
+                font-family: Georgia;
+                max-width: 800px;
+                margin: 0 auto;
+                line-height: 30px;
+                font-size: 18px;
+                padding-left: 350px;
+                padding-right: 50px;
+                color: #111;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+                font-family: Arial;
+            }
+            
+            h1 {
+                padding-top: 200px;
+                line-height: 50px;
+            }
+            h2 {
+                padding-top: 30px;
+            }
+            h3 {
+                padding-top: 20px;
+            }
+            h4 {
+                padding-top: 10px;
+            }
+            p {
+                text-align: justify;
+            }
+            p a {
+                word-wrap: break-word;
+                white-space: pre;
+            }
+            code {
+                word-wrap: break-word;
+            }
+            blockquote {
+                border-left: 3px solid #eee;
+                margin-left: 20px;
+                padding-left: 20px;
+            }
+            
+            ::selection {
+                background-color: #E4E4E4;
+            }
+            
+            table {
+                width: 100%;
+            }
+            table caption {
+                font-weight: bold;
+            }
+            table tr {
+                padding: 0;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
+            table tr.even {
+                background-color: #fafafa;
+            }
+            table td {
+                margin: 0;
+                padding: 3px 5px;
+            }
+            
+            p span.added {
+                color: green;
+                background-color: #FFF3C5;
+            }
+            p span.removed {
+                color: red;
+                background-color: #FFF3C5;
+            }
+            
+            #title-page {
+                padding: 80px 0;
+            }
+            
+            #TOC {
+                position: fixed;
+                left: 0;
+                top: 0;
+                overflow-y: scroll;
+                height: 100%;
+                background: #fafafa;
+                max-width: 300px;
+                font-family: Arial;
+                font-size: 15px;
+                line-height: 30px;
+            }
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background-color: #ECECEC;
+            }
+            ::-webkit-scrollbar-thumb {
+                background-color: #B0B0B0;
+                border-radius: 8px;
+            }
+            #TOC > ul {
+                padding-right: 10px;
+            }
+            #TOC ul {
+                list-style: none;
+                padding-left: 20px;
+            }
+            #TOC ul li a {
+                text-decoration: none;
+                color: #364149;
+                text-overflow: ellipsis;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            #TOC ul li a:hover {
+                color: #008cff;
+            }
+            
+            .figure {
+                text-align: center;
+            }
+            .figure p {
+                text-align: center;
+                font-style: italic;
+            }
+            .figure img {
+                  width: 100%;
+            }
+            </style>
+                <script src="js/jquery.js"></script>
+        <script src="js/diff.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+                <!--
+                -->
+        <div id="title-page">
+            <h1>This is the title of the thesis</h1>
+            <h2>Firstname Surname</h2>
+        </div>
+                    <div id="TOC">
+                <ul>
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#acknowledgements">Acknowledgements</a></li>
+                <li><a href="#brief-introduction-to-cryptocurrency"><span class="toc-section-number">1</span> Brief Introduction to Cryptocurrency</a><ul>
+                <li><a href="#background"><span class="toc-section-number">1.1</span> Background</a></li>
+                <li><a href="#the-block"><span class="toc-section-number">1.2</span> The Block</a></li>
+                <li><a href="#the-blockchain"><span class="toc-section-number">1.3</span> The Blockchain</a></li>
+                <li><a href="#proof-of-work"><span class="toc-section-number">1.4</span> Proof-Of-Work</a></li>
+                </ul></li>
+                <li><a href="#introducing-bulwark"><span class="toc-section-number">2</span> Introducing Bulwark</a><ul>
+                <li><a href="#a-solid-foundation"><span class="toc-section-number">2.1</span> A solid foundation</a></li>
+                <li><a href="#a-team-dedicated-to-the-community"><span class="toc-section-number">2.2</span> A team dedicated to the community</a></li>
+                <li><a href="#fair-and-balanced"><span class="toc-section-number">2.3</span> Fair and balanced</a></li>
+                <li><a href="#the-trouble-with-pre-mine-practices"><span class="toc-section-number">2.4</span> The trouble with pre-mine practices</a><ul>
+                <li><a href="#case-study-foobarbazcoin"><span class="toc-section-number">2.4.1</span> Case Study: FooBarBazCoin</a></li>
+                </ul></li>
+                <li><a href="#a-fairer-alternative"><span class="toc-section-number">2.5</span> A fairer alternative</a><ul>
+                <li><a href="#comparison-of-both-approaches"><span class="toc-section-number">2.5.1</span> Comparison of both approaches</a></li>
+                <li><a href="#instamines-and-our-approach"><span class="toc-section-number">2.5.2</span> Instamines and our approach</a></li>
+                <li><a href="#ico-more-like-ic-no"><span class="toc-section-number">2.5.3</span> ICO? More like IC-NO!</a></li>
+                </ul></li>
+                <li><a href="#fast-and-functional"><span class="toc-section-number">2.6</span> Fast and functional</a></li>
+                </ul></li>
+                <li><a href="#our-blockchain-parameters."><span class="toc-section-number">3</span> Our Blockchain Parameters.</a><ul>
+                <li><a href="#bulwark-specifications-at-a-glance"><span class="toc-section-number">3.1</span> Bulwark Specifications at a Glance</a></li>
+                <li><a href="#slowstart"><span class="toc-section-number">3.2</span> SlowStart</a></li>
+                <li><a href="#dark-gravity-wave-3.0"><span class="toc-section-number">3.3</span> Dark Gravity Wave 3.0</a></li>
+                </ul></li>
+                <li><a href="#block-rewards"><span class="toc-section-number">4</span> Block Rewards</a><ul>
+                <li><a href="#pow-block-rewards"><span class="toc-section-number">4.1</span> PoW Block Rewards</a></li>
+                <li><a href="#pos-block-rewards"><span class="toc-section-number">4.2</span> PoS Block Rewards</a></li>
+                </ul></li>
+                <li><a href="#nist5-hashing"><span class="toc-section-number">5</span> NIST5 Hashing</a><ul>
+                <li><a href="#why-nist5"><span class="toc-section-number">5.1</span> Why NIST5</a></li>
+                <li><a href="#the-five-finalists-nist-sha-3-competition"><span class="toc-section-number">5.2</span> The Five Finalists (NIST SHA-3 Competition)</a></li>
+                <li><a href="#the-new-sha-3-standard"><span class="toc-section-number">5.3</span> The new SHA-3 Standard</a></li>
+                <li><a href="#mining-software-available"><span class="toc-section-number">5.4</span> Mining Software Available</a></li>
+                </ul></li>
+                <li><a href="#feature-set"><span class="toc-section-number">6</span> Feature Set</a><ul>
+                <li><a href="#masternodes"><span class="toc-section-number">6.1</span> Masternodes</a></li>
+                <li><a href="#obfuscation-coin-mixing"><span class="toc-section-number">6.2</span> Obfuscation / Coin Mixing</a></li>
+                <li><a href="#swifttx"><span class="toc-section-number">6.3</span> SwiftTX</a></li>
+                <li><a href="#sporks"><span class="toc-section-number">6.4</span> Sporks</a></li>
+                <li><a href="#tor-ipv6-masternodes"><span class="toc-section-number">6.5</span> TOR &amp; IPV6 Masternodes</a></li>
+                <li><a href="#community-importance-and-the-governance-system"><span class="toc-section-number">6.6</span> Community Importance and the Governance System</a></li>
+                <li><a href="#seesaw-posmasternode-rewards"><span class="toc-section-number">6.7</span> SeeSaw PoS/Masternode Rewards</a></li>
+                </ul></li>
+                <li><a href="#the-future"><span class="toc-section-number">7</span> The Future</a><ul>
+                <li><a href="#the-bulwark-tool-chest"><span class="toc-section-number">7.1</span> The Bulwark Tool Chest</a></li>
+                <li><a href="#privacy-and-software-enhancements"><span class="toc-section-number">7.2</span> Privacy and Software Enhancements</a></li>
+                <li><a href="#bulwark-secure-home-node"><span class="toc-section-number">7.3</span> Bulwark Secure Home Node</a></li>
+                <li><a href="#extension-of-our-branding"><span class="toc-section-number">7.4</span> Extension of our Branding</a></li>
+                <li><a href="#design-and-visual"><span class="toc-section-number">7.5</span> Design and Visual</a></li>
+                </ul></li>
+                <li><a href="#conclusion"><span class="toc-section-number">8</span> Conclusion</a><ul>
+                <li><a href="#summary"><span class="toc-section-number">8.1</span> Summary</a></li>
+                <li><a href="#future-work"><span class="toc-section-number">8.2</span> Future work</a></li>
+                </ul></li>
+                <li><a href="#references">References</a></li>
+                </ul>
+            </div>
+                                <!-- 
+This is the Latex-heavy title page. 
+People outside UCL may want to remove the header logo 
+and add the centred logo
+-->
+
+<!-- This page is for an official declaration. -->
+<p>   </p>
+<h1 id="abstract" class="unnumbered">Abstract</h1>
+<!-- This is the abstract -->
+<p>Bulwark (ticker: BWK) is a community-oriented coin born out of an observation of generally unfair practices within the masternode privacy coin space. Our deliberate, fair, launch strategy allows participants the opportunity to join a promising project at inception. We offer a simple value proposition with no grandiose promise: we will deliver a privacy coin that works today and into the future by leveraging best-practices from both DASH and PIVX. No fanciful visions with a limited prospect of delivery, but a working coin on a working platform with support into the future. This does not mean we plan no innovation, but instead that we will deliver results rather than hype. There are too many coins that are fueled by hype - but completely devoid of substance - and we do not want to join the growing cadre of coins driven by the motto of over-promise and under deliver. With no ICO, a soft-launch reward ramp, small premine, and miner-favored block reward allocations, Bulwark adopters will have ground-floor access to a privacy coin offering a blend of masternodes and the best available privacy coin technology alongside a meaningful development roadmap. Masternodes will be available, and functioning, on launch and are a fundamental part of this coin's vision and will stabilize circulation, secure the network, and provide important functionality.  </p>
+<h1 id="acknowledgements" class="unnumbered">Acknowledgements</h1>
+<!-- This is for acknowledging all of the people who helped out -->
+<p>Bulwark would not have been possible without the prior works of the respective Bitcoin, Peercoin, Blackcoin, Talkcoin, Dash and PIVX teams. Open source software and its contributors are constantly paving the way toward new and exciting innovations. When information and knowledge are free to build upon, society as a whole benefits. We are grateful to our predecessors for the opportunity to contribute to this growing ecosystem.</p>
+<!-- Use the \newpage command to force a new page -->
+
+
+
+
+<h1 id="brief-introduction-to-cryptocurrency"><span class="header-section-number">1</span> Brief Introduction to Cryptocurrency</h1>
+<h2 id="background"><span class="header-section-number">1.1</span> Background</h2>
+<p>In 2009, Satoshi Nakamoto released a paper entitled  detailing his vision of commerce. Nakamoto's vision detailed a peer-to-peer currency system backed by a hash based proof-of-work. The network would timestamp transactions by hashing them into an ongoing ledger that could not be changed without redoing the proof-of-work. Nodes would choose the longest chain as proof of events witnessed by the largest pool of hashing power. As long as <span class="math inline">≥</span> 51% of the network hashing power is controlled by nodes not intending to facilitate an attack, the chain they generate will remain the longest. <span class="citation">(Nakamoto 2009)</span></p>
+<h2 id="the-block"><span class="header-section-number">1.2</span> The Block</h2>
+<p>Each block on the network is prefaced with an 80 byte header containing a double SHA256 hashed copy of the previous block's header, merkle root (a double SHA256 hashed derivation of all the hashes that occurred in the block), the time stamp at which proof-of-work began, difficulty target this header's hash must be less-than or equal to, and the nonce at which miners reached the difficulty target. As such, any attempts to modify any transaction in any block will result in the rejection of the block by the network's miners. <span class="citation">(Bitcoin Core Team 2017)</span></p>
+<h2 id="the-blockchain"><span class="header-section-number">1.3</span> The Blockchain</h2>
+<p>Groups of transactions are formed into blocks and those blocks are placed chronologically into a chain - forming the blockchain. The blockchain creates a moving history of all of the activity within the network and serves as a distributed consensus model where any transaction can be verified at any time <span class="citation">(Crosby et al. 2015)</span>.</p>
+<h2 id="proof-of-work"><span class="header-section-number">1.4</span> Proof-Of-Work</h2>
+<p>Proof-of-work is a system of verification in which miners must devote tangible resources (electricity, hardware costs) to solve an arbitrary probabilistic . In order for a bad actor to taint the blockchain with a fraudulent transaction, they must complete all proof-of-work up to the present point. <span class="citation">(Okupski 2016)</span></p>
+<h1 id="introducing-bulwark"><span class="header-section-number">2</span> Introducing Bulwark</h1>
+<h2 id="a-solid-foundation"><span class="header-section-number">2.1</span> A solid foundation</h2>
+<p>Every home needs a solid foundation, and Bulwark is no different. Bulwark is built upon , which itself is built upon the popular  cryptocurrency. While lineages can all be traced back to the original Satoshi Core, each project has chosen a particular direction with goals and ideals that represent the communities they serve. We will extend, and place emphasis on, the privacy coin features of our predecessor platforms by exploring new technologies, while creating tool sets and opportunities for Bulwark's integration into present day technology platforms.</p>
+<h2 id="a-team-dedicated-to-the-community"><span class="header-section-number">2.2</span> A team dedicated to the community</h2>
+<p>For some projects, communities are an afterthought. Bulwark's number one priority is the community. With giveaways, contests, a lively discussion platform and a zero-tolerance policy toward the harassment of newcomers, Bulwark strives to be the cryptocurrency for all varieties of end-users. Members of our userbase are already contributing useful scripts and guides to further enhance the user experience.</p>
+<h2 id="fair-and-balanced"><span class="header-section-number">2.3</span> Fair and balanced</h2>
+<p>At the time of writing, there have been an influx of cryptocurrencies utilizing a similar foundation. While the underlying technology is solid, oftentimes a deeper examination of their specifications and blockchain parameters reveals less-than-fair practices.</p>
+<h2 id="the-trouble-with-pre-mine-practices"><span class="header-section-number">2.4</span> The trouble with pre-mine practices</h2>
+<h3 id="case-study-foobarbazcoin"><span class="header-section-number">2.4.1</span> Case Study: FooBarBazCoin</h3>
+<p>A growing trend in the cryptocurrency space is to choose an arbitrary date far into the future and then base a premine percentage on the circulating supply as of that date. Let's take a look at the fictional FBC (), a  fork.</p>
+<ul>
+<li>Block Reward: 15</li>
+<li>Block Time: 2.5 minutes</li>
+<li>POW/Masternode Split: 50/50%</li>
+<li>Initial difficulty algorithm: KGW</li>
+<li>Subsidy decreases by 12% each year</li>
+<li>Maximum Coin supply: ~25 Million</li>
+<li>2.5% pre-mine</li>
+</ul>
+<p>In this example, an advertised 2.5% pre-mine translating to ~643,000 coins (out of ~25 Million) seems reasonable to the casual observer. However, for both PoW and Masternode rewards to match the coins the developers hold, it would take approximately 43,000 blocks. At a target of 2.5 minutes per block, it would take roughly 150 days for miners (or 75 days overall) to generate the same amount of coins. After 75 days, the developers would still control half of the coins in existence.</p>
+<h2 id="a-fairer-alternative"><span class="header-section-number">2.5</span> A fairer alternative</h2>
+<p>The Bulwark Team recognized this, and decided to be up-front. Our pre-mine of 489,720 coins (3.5%) represents a little more than 12 days of PoW mining or slightly more than 10 days of overall production. Hopefully this will serve to instill a peace-of-mind in the community that, after a certain point, the market cannot be significantly devalued as a result of the coins held by the core team. As you can see in the figures below, both representing 180 days in each scenario, the difference is very clear. We hope that in approaching the subject in a frank manner will set precedence and serve to benefit the community as a whole.</p>
+<h3 id="comparison-of-both-approaches"><span class="header-section-number">2.5.1</span> Comparison of both approaches</h3>
+<p><embed src="source/figures/fig1.eps" style="width:50.0%" /> <embed src="source/figures/fig2.eps" style="width:50.0%" /></p>
+<h3 id="instamines-and-our-approach"><span class="header-section-number">2.5.2</span> Instamines and our approach</h3>
+<p>Dash (Darkcoin) presents an interesting case study on the need for instamine protection. Nearly 10-15% of the total Dash supply was created within the first few days of the coin's existence thanks to some enterprising users <span class="citation">(Wiecko 2017)</span>. Our approach to the instamine issue was two-fold. We utilized a slow subsidy in which the first 960 blocks (1 day) linearly ramped up to the full block reward with 100% of block rewards going to miners that day as well. Historically, this has been approached by a very small block reward that suddenly shifts at a certain height to a full block reward, however, this has oftentimes resulted in pools getting deliberately DDoSed or overwhelmed with new miner traffic. With a linearly increasing reward, there would be no point to attempt to interfere with miners or pool operators for monetary gain.</p>
+<h3 id="ico-more-like-ic-no"><span class="header-section-number">2.5.3</span> ICO? More like IC-NO!</h3>
+<p>Let's face it, at the time of writing we're constantly being barraged with s. While they have their legitimate place in the cryptocurrency ecosystem, oftentimes they only serve to create concentrated pockets of wealth. Considering that Bulwark both offers Masternode rewards and, in it's second phase, proof-of-stake rewards, this concentration of wealth can cause huge market swings and tilts the governance system strongly in the favor of the earliest (and wealthiest) adopters. While concentrations of wealth are unavoidable as a whole, we believe that any opportunity we can take to keep the playing field even is an opportunity with taking. We launched with a scaled block reward strategy, a fair launch mechanic to encourage a broad distribution of Bulwark across many users, ideally avoiding some of the wealth concentration seen in other projects.</p>
+<h2 id="fast-and-functional"><span class="header-section-number">2.6</span> Fast and functional</h2>
+<p>With a 90 second block time, masternode consensus and transaction locking, reasonable emissions schedule, and eco-friendly staking, Bulwark aspires to be a truly fast and functional cryptocurrency.</p>
+<h1 id="our-blockchain-parameters."><span class="header-section-number">3</span> Our Blockchain Parameters.</h1>
+<h2 id="bulwark-specifications-at-a-glance"><span class="header-section-number">3.1</span> Bulwark Specifications at a Glance</h2>
+
+<table>
+<caption>At a glance specifications for Bulwark </caption>
+<colgroup>
+<col width="36%" />
+<col width="63%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Specification</th>
+<th align="left">Descriptor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Ticker</td>
+<td align="left">BWK</td>
+</tr>
+<tr class="even">
+<td align="left">Algorithm</td>
+<td align="left">NIST5</td>
+</tr>
+<tr class="odd">
+<td align="left">RPC Port</td>
+<td align="left">52541</td>
+</tr>
+<tr class="even">
+<td align="left">P2P Port</td>
+<td align="left">52543</td>
+</tr>
+<tr class="odd">
+<td align="left">Block Spacing</td>
+<td align="left">90 Seconds</td>
+</tr>
+<tr class="even">
+<td align="left">Difficulty Algorithm</td>
+<td align="left">Dark Gravity Wave v3.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Block Size</td>
+<td align="left">1MB</td>
+</tr>
+<tr class="even">
+<td align="left">Mined/Minted Maturity</td>
+<td align="left">67 Blocks (~100 Minutes)</td>
+</tr>
+<tr class="odd">
+<td align="left">Confirmation</td>
+<td align="left">6 Blocks (~9 Minutes)</td>
+</tr>
+<tr class="even">
+<td align="left">Circulation (1 Year)</td>
+<td align="left">14,505,720 BWK</td>
+</tr>
+<tr class="odd">
+<td align="left">Circulation (5 Years)</td>
+<td align="left">27,668,220 BWK</td>
+</tr>
+<tr class="even">
+<td align="left">PoW Period</td>
+<td align="left"> <span class="math inline">≤</span> 345,600</td>
+</tr>
+<tr class="odd">
+<td align="left">PoS Period</td>
+<td align="left"> <span class="math inline">≥</span> 345,601</td>
+</tr>
+<tr class="even">
+<td align="left">Protocol Support</td>
+<td align="left">IPV4, IPV6, TOR</td>
+</tr>
+<tr class="odd">
+<td align="left">PoS</td>
+<td align="left">Blackcoin v3.0 PoS, PIVX SeeSaw rewards.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="slowstart"><span class="header-section-number">3.2</span> SlowStart</h2>
+<p>Our fair start is provided with the following code snippet (Credit: ZCash).</p>
+<div class="sourceCode"><pre class="sourceCode c++"><code class="sourceCode cpp">
+        <span class="dt">int64_t</span> nSlowSubsidy = <span class="dv">50</span> * COIN;
+
+        <span class="cf">if</span> (nHeight &lt; <span class="dv">960</span> / <span class="dv">2</span>) {        <span class="co">// If block height less than 480,</span>
+           nSlowSubsidy /= <span class="dv">960</span>;         <span class="co">// Set nSubsidy to .05208333</span>
+           nSlowSubsidy *= nHeight;     <span class="co">// Multiply present height by .05208333</span>
+        } <span class="cf">else</span> <span class="cf">if</span> (nHeight &lt; <span class="dv">960</span> {      <span class="co">// ex: Block 200, BR will be 10.41666600</span>
+            nSlowSubsidy /= <span class="dv">960</span>;        <span class="co">// Credits: ZCASH Team</span>
+            nSlowSubsidy *= nHeight;</code></pre></div>
+<h2 id="dark-gravity-wave-3.0"><span class="header-section-number">3.3</span> Dark Gravity Wave 3.0</h2>
+<p>Dark Gravity Wave is employed by Bulwark from the start as a method of retargeting PoW difficulty. It uses a simple moving average that can respond to large nethash increases or drop-offs in just a few blocks. This alleviates the &quot;stuck block effect&quot; often caused by multipools and prevents one person adding a substantial amount of computing power from instantly solving more than a few blocks.</p>
+<h1 id="block-rewards"><span class="header-section-number">4</span> Block Rewards</h1>
+<h2 id="pow-block-rewards"><span class="header-section-number">4.1</span> PoW Block Rewards</h2>
+<table style="width:81%;">
+<caption>PoW Period Block Reward Specifications </caption>
+<colgroup>
+<col width="18%" />
+<col width="22%" />
+<col width="11%" />
+<col width="11%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Subsidy</th>
+<th align="left">Block</th>
+<th align="left">PoW</th>
+<th align="center">MN</th>
+<th align="left">Circulation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">489720</td>
+<td align="left">1</td>
+<td align="left">100%</td>
+<td align="center">NA</td>
+<td align="left">489200</td>
+</tr>
+<tr class="even">
+<td align="left">~25(avg)</td>
+<td align="left">2-960</td>
+<td align="left">100%</td>
+<td align="center">NA</td>
+<td align="left">513150</td>
+</tr>
+<tr class="odd">
+<td align="left">50.000</td>
+<td align="left">961-86400</td>
+<td align="left">80%</td>
+<td align="center">20%</td>
+<td align="left">4785100</td>
+</tr>
+<tr class="even">
+<td align="left">43.750</td>
+<td align="left">86401-172800</td>
+<td align="left">75%</td>
+<td align="center">25%</td>
+<td align="left">8565056</td>
+</tr>
+<tr class="odd">
+<td align="left">37.500</td>
+<td align="left">172801-259200</td>
+<td align="left">66.6%</td>
+<td align="center">33.3%</td>
+<td align="left">11801306</td>
+</tr>
+<tr class="even">
+<td align="left">31.250</td>
+<td align="left">259201-345600</td>
+<td align="left">50%</td>
+<td align="center">50%</td>
+<td align="left">14501275</td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<embed src="source/figures/fig4.eps" style="width:55.0%" />
+<p class="caption">PoW Period Block Reward </p>
+</div>
+
+<h2 id="pos-block-rewards"><span class="header-section-number">4.2</span> PoS Block Rewards</h2>
+<table style="width:94%;">
+<caption>PoS Period Block Reward Specifications </caption>
+<colgroup>
+<col width="13%" />
+<col width="22%" />
+<col width="16%" />
+<col width="27%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Subsidy</th>
+<th align="left">Block</th>
+<th align="left">Budget</th>
+<th align="center">PoS/Masternode</th>
+<th align="center">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">25.000</td>
+<td align="left">345601-432000</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 2</td>
+</tr>
+<tr class="even">
+<td align="left">21.875</td>
+<td align="left">432001-518400</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 2</td>
+</tr>
+<tr class="odd">
+<td align="left">18.750</td>
+<td align="left">518401-604800</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 2</td>
+</tr>
+<tr class="even">
+<td align="left">15.625</td>
+<td align="left">604801-691200</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 2</td>
+</tr>
+<tr class="odd">
+<td align="left">10.250</td>
+<td align="left">691201-777600</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 3</td>
+</tr>
+<tr class="even">
+<td align="left">10.938</td>
+<td align="left">777601-864000</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 3</td>
+</tr>
+<tr class="odd">
+<td align="left">9.3750</td>
+<td align="left">864001-950400</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 3</td>
+</tr>
+<tr class="even">
+<td align="left">7.8120</td>
+<td align="left">950401-1036800</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 3</td>
+</tr>
+<tr class="odd">
+<td align="left">6.2500</td>
+<td align="left">1036801-1123200</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 4</td>
+</tr>
+<tr class="even">
+<td align="left">5.4690</td>
+<td align="left">1123201-1209600</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 4</td>
+</tr>
+<tr class="odd">
+<td align="left">4.6880</td>
+<td align="left">1209601-1296000</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 4</td>
+</tr>
+<tr class="even">
+<td align="left">3.9060</td>
+<td align="left">1296000-1382400</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 4</td>
+</tr>
+<tr class="odd">
+<td align="left">3.1250</td>
+<td align="left">1382401-1468800</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 5</td>
+</tr>
+<tr class="even">
+<td align="left">2.7340</td>
+<td align="left">1468801-1555200</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 5</td>
+</tr>
+<tr class="odd">
+<td align="left">2.3440</td>
+<td align="left">1555201-1641600</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 5</td>
+</tr>
+<tr class="even">
+<td align="left">1.9530</td>
+<td align="left">1641601-1728000</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">Year 5</td>
+</tr>
+<tr class="odd">
+<td align="left">1.6250</td>
+<td align="left">1728000+</td>
+<td align="left">10%</td>
+<td align="center"></td>
+<td align="center">In perpetuity</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="nist5-hashing"><span class="header-section-number">5</span> NIST5 Hashing</h1>
+<h2 id="why-nist5"><span class="header-section-number">5.1</span> Why NIST5</h2>
+<p>Popularized by TalkCoin in 2014, the NIST5 hashing algorithm has seen modest mainstream usage. NIST5 can be mined on a wide array of consumer-grade hardware including CPUs, as well as AMD and NVidia GPUs. NIST5 is not as ASIC resistant as some other memory hard algorithms, but we believe the trade-off is acceptable to improve system stability and reduce power consumption relative to those memory hard algorithms. In the event that firmware updates adding NIST5 support to ASICs arise before the end of our PoW period, we are prepared with alternative an algorithm as a replacement. We will call for a community vote on course of action (if any) and implement accordingly. We feel that our short PoW period and willingness to switch algorithms disincentivizes ASIC manufacturers and do not foresee an issue arising.</p>
+<h2 id="the-five-finalists-nist-sha-3-competition"><span class="header-section-number">5.2</span> The Five Finalists (NIST SHA-3 Competition)</h2>
+<p>The five hashing algorithms that make up NIST5 are the finalists from the NIST Hashing Competition <span class="citation">(Chang et al. 2012)</span>. They are (in the order that blocks are hashed):</p>
+<p><strong>Blake</strong> <span class="citation">(Aumasson 2013)</span>, <strong>Grøstl</strong> <span class="citation">(Gauravaram1 et al. 2012)</span>, <strong>JH</strong> <span class="citation">(Wu 2012)</span>, <strong>Keccak</strong> <span class="citation">(Bertoni et al. 2012)</span>, and <strong>Skein</strong> <span class="citation">(Ferguson et al. 2010)</span></p>
+<h2 id="the-new-sha-3-standard"><span class="header-section-number">5.3</span> The new SHA-3 Standard</h2>
+<p>Keccak eventually passed the final round to be named the new SHA-3 hashing function, while the other four algorithms (despite being considered cryptographically secure) lost a few points from the judges for some minor technicalities. We believe the combination of the new SHA-3 standard along with the other finalist choices provide a quick, secure, and established hashing algorithm.</p>
+<h2 id="mining-software-available"><span class="header-section-number">5.4</span> Mining Software Available</h2>
+<p>At the time of writing, there are several options for miners</p>
+<table style="width:93%;">
+<colgroup>
+<col width="20%" />
+<col width="23%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Platform</th>
+<th align="left">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">SGMiner-5.0</td>
+<td align="left">OpenCL</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">ccminer-2.2.2</td>
+<td align="left">CUDA</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">cpuminer-opt</td>
+<td align="left">CPU</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="feature-set"><span class="header-section-number">6</span> Feature Set</h1>
+<h2 id="masternodes"><span class="header-section-number">6.1</span> Masternodes</h2>
+<p>Masternodes are, essentially, a decentralized web of computers that serve the Bulwark network. Masternodes perform important network functions and receive part of the block rewards. They serve the Bulwark ecosystem by stabilizing coin supply, processing transactions, and securing the network. Masternodes require 5000 BWK and modest technical knowledge to operate. Any wallet controlling 5000 BWK can set up a masternode.</p>
+<h2 id="obfuscation-coin-mixing"><span class="header-section-number">6.2</span> Obfuscation / Coin Mixing</h2>
+<p>Bulwark features Obfuscation, based on CoinJoin but with various improvements over the original, and done via coin mixing in a decentralized fashion facilitated by the network of masternodes. This provides an additional layer of privacy in transactions. While not perfectly anonymous, Obfuscation via node mixing it is far better than the standard bitcoin transaction. For example, all Bitcoin transactions are transparent. For Bulwark, a nefarious actor would need to control 50% of the operating masternodes to have less than 0.5% chance of de-anonymizing a single transaction that was mixed with 8 rounds of Obfuscation <span class="citation">(Kiraly 2017b)</span>. This important feature provides a high-level of anonymity for BWK users that elect to obfuscate their transactions.</p>
+<h2 id="swifttx"><span class="header-section-number">6.3</span> SwiftTX</h2>
+<p>SwiftTX provides masternodes with locking and consensus authority for transactions. When a transaction is submitted to the network, a group of masternodes will validate the transaction. If those masternodes reach consensus on the transaction’s validity it will be locked for later introduction into the blockchain, greatly increasing transaction speed compared to conventional systems (like Bitcoin’s 10 minute block times with multiple confirmations). SwiftTX makes it possible for multiple transactions to take place before a block on the network is mined with the same inputs. This system is based on Dash's InstantSend. <span class="citation">(Kiraly 2017a)</span>.</p>
+<h2 id="sporks"><span class="header-section-number">6.4</span> Sporks</h2>
+<p>The Bulwark network employs the multi-phased fork mechanism known as “sporking”. This will enable the BWK network to implement new features while minimizing the chances of an unintended network fork during rollout. Spork changes are deployable via the network and can be turned on and off as necessary without requiring node software updates <span class="citation">(strophy 2017)</span>. This feature is extremely useful and allows the network to react quickly to security vulnerabilities.</p>
+<h2 id="tor-ipv6-masternodes"><span class="header-section-number">6.5</span> TOR &amp; IPV6 Masternodes</h2>
+<p>Bulwark allows the user to run their full node or masternode from either an onion address or an IPV6 address. We have been working to add full TOR nodes to both strengthen the TOR network itself, and the Bulwark user experience operating in TOR only mode. A unique feature of TOR masternode support is being able to operate your masternode as a TOR hidden service. TOR nodes enable users with stable internet connections to operate masternodes out of their home network without the privacy implications of revealing their location or the dangers of exposing their home network to the potential for attack or compromise.</p>
+<h2 id="community-importance-and-the-governance-system"><span class="header-section-number">6.6</span> Community Importance and the Governance System</h2>
+<p>The Bulwark community is the most important factor behind the long-term success of the project, and their ability to meaningfully influence the future of the coin is paramount. As such, at the end of the PoW phase we intend to activate budget superblocks on the network. These superblocks, paid monthly, will enable the community to exert meaningful control over all aspects of Bulwark's development, brand presence, and community affairs. Delaying the activation of this system will give us time to develop the underlying framework necessary for a positive user experience, and maximize block rewards available to miners and masternodes.</p>
+<p>We will utilize a multi-phase process for creating and submitting proposals. Each step will need to be fully completed. Failure to complete the steps outlined will likely result in a proposal not being activated. A basic outline of these steps are as follows:</p>
+<ul>
+<li>Start in our Discord chat, and talk with some of the seasoned users. Gauge interest and if the response is positive, move to the next phase.</li>
+<li>Utilize multiple social media platforms to discuss and get feedback. Remember that Bulwark has a a diverse userbase and differing levels of governance participation, reaching a portion of the userbase will often require some footwork. Take note of these discussions and be able to cite them in the formal pre-proposal. The more citations provided, the better.</li>
+<li>Be open to suggestions from the community and developers. Be flexible and willing to incorporate external ideas and suggestions in your proposal.</li>
+<li>Create a formal pre-proposal on the Governance-&gt;Pre-Proposal section of our website. Provide citations for all discussions that occurred from the previous step. Treat your pre-proposal as if it is what will be submitted to the blockchain for voting.</li>
+<li>Upon completion of these steps, you will submit your proposal to the blockchain. Be prepared for two fees, one at the time of submission and a ballot fee paid to the developer that activates your proposal on the blockchain. The submission fee is non-refundable, and the balloting fee will only be paid upon approval and activation of your proposal.</li>
+<li>Everyone is free to adjust their proposal to include the reimbursement cost of these two fees. Please make sure in your formal proposal you state that you are adding reimbursement to the stipend requested.</li>
+<li>Be sure to get back in touch with everyone you spoke with so your idea will be voted on. For a proposal to be paid out, 10% of the eligible masternodes must vote 'yes' on your proposal. This process of getting a 10% consensus can be much harder than it sounds, so be diligent, informative, and respectful in procuring the votes necessary for your proposal to be paid.</li>
+</ul>
+<h2 id="seesaw-posmasternode-rewards"><span class="header-section-number">6.7</span> SeeSaw PoS/Masternode Rewards</h2>
+<p>We have decided to utilize the SeeSaw reward system popularized by PIVX <span class="citation">(jakiman 2017)</span>. The SeeSaw reward system begins with a 9:1 block reward ratio (favoring masternodes), and smoothly adjusts the ratio of reward between staking and node operators until around 41.5% of coins in circulation are locked into masternodes, at which time staking rewards reach a slight advantage over masternode rewards on a coin-by-coin basis. The reason we have the SeeSaw slightly favoring staking rewards is because we want to avoid the problems - like significant price volatility and low liquidity - that impact coins with very-high percentages of their circulating supply locked in nodes. This strategy will mitigate user frustration over access to coin supply and maintains the relevance of our robust network. With one of our goals being a well-supported platform for anonymous commerce, transactability is of the utmost importance to those accepting Bulwark and those holding Bulwark. <embed src="source/figures/fig3.eps" style="width:100.0%" /></p>
+<h1 id="the-future"><span class="header-section-number">7</span> The Future</h1>
+<h2 id="the-bulwark-tool-chest"><span class="header-section-number">7.1</span> The Bulwark Tool Chest</h2>
+<p>A collection of code snippets, APIs, libraries, scripts, and knowledge that will serve to encourage a bazaar-like environment where developers who may be seeking the addition of cryptocurrency support in their projects are free to exchange knowledge, information, and code. We believe that providing developers with these tools parallels providing a carpenter the tools they need to create exciting and masterful projects.</p>
+<h2 id="privacy-and-software-enhancements"><span class="header-section-number">7.2</span> Privacy and Software Enhancements</h2>
+<p>We are committed to adopting new protocols that will enhance the privacy of our userbase. There are several paths we are evaluating at present and plan to begin internal testing and development of in the first half of 2018. Some of these enhancements include:</p>
+<ul>
+<li>I2P privacy network</li>
+<li>Zerocoin protocol or Stealth addressing (Whem we are confident in the maturity of the solution)</li>
+<li>Synchronizing our codebase closer with bitcoin mainline</li>
+<li>Streamlining/Updating QT Wallet</li>
+<li>Libtox Integration</li>
+<li>Virtualization/containerization of the Bulwark wallet to add an extra layer of security</li>
+</ul>
+<h2 id="bulwark-secure-home-node"><span class="header-section-number">7.3</span> Bulwark Secure Home Node</h2>
+<p>We will be working with CAD specialists to design a small, self-contained, home Bulwark node. Users will be able to connect this to their home network and configure using a Web UI. The functions we intend to launch with are as follows:</p>
+<ul>
+<li>For those with stable internet connections, an easy to set up fully onionized masternode (or full node) using TOR hidden services</li>
+<li>Option to function as a relay to improve the overall TOR network</li>
+<li>VPN and/or proxy that can be used to route home internet traffic through TOR/I2P network</li>
+<li>Bulwark staking through either virtualization or an add-on device</li>
+</ul>
+<p>In keeping with the spirit of decentralization, the 3D printable files and all source code will be available to the community for home assembly.</p>
+<h2 id="extension-of-our-branding"><span class="header-section-number">7.4</span> Extension of our Branding</h2>
+<p>We will continue to extend our brand and intend to work with hardware vendors and system integrators which share the same passion and ideals that we do. In five years we want the name 'Bulwark' to be synonymous with not just cryptocurrency but privacy, security, and the respect for a user's freedom. Bulwark's main purpose is to provide freedom of choice through privacy.</p>
+<h2 id="design-and-visual"><span class="header-section-number">7.5</span> Design and Visual</h2>
+<p>Through Research and Development, we aim to create a visual design language for Bulwark that sets it apart from its competition in the crypto market. Our design team plans to innovate and experiment with the current UI/UX/Branding to ultimately achieve design excellence by searching for a medium that allows the best user experience, and aesthetics that are innovative and beautiful. This will be done by researching our competitors, keeping on top of current technological trends &amp; standards and continuously striving to bring new and exciting visuals to the end-users.</p>
+<h1 id="conclusion"><span class="header-section-number">8</span> Conclusion</h1>
+<!-- 
+A chapter that concludes the thesis by summarising the learning points
+and outlining future areas for research
+-->
+<h2 id="summary"><span class="header-section-number">8.1</span> Summary</h2>
+<p>Bulwark is a privacy-oriented coin with masternodes, governance, and an evolving ecosystem of tools. The project began with a fair launch and a focus on broad coin distribution. The slow start, block reward split, and hashing algorithm were deliberately selected to create opportunities for significant community participation. Bulwark launched with a variety of important privacy coin features and the development team is hard at work to introduce new features and build upon existing technologies. Bulwark aims to empower choice through privacy and will focus considerable effort to this end.</p>
+<h2 id="future-work"><span class="header-section-number">8.2</span> Future work</h2>
+<p>The masternode privacy coin ecosystem has recently been inundated by coins seeking to entice new users through promises of substantial returns on investment, gigantic road maps filled with improbable deliverables, and a general focus on marketing over actual improvement within the space. Bulwark plans to be the opposite: low on hype creation and high on actual creation. Present and future goals for the project will follow the formula of being specific, measurable, attainable, relevant and time bound.</p>
+
+<!-- 
+Do not edit this page.
+
+References are automatically generated from the BibTex file (References.bib)
+
+...which you should create using your reference manager.
+-->
+<h1 id="references" class="unnumbered">References</h1>
+<div id="refs" class="references">
+<div id="ref-Blake">
+<p>Aumasson, L.M., Jean-Phillipe Henzen, 2013. SHA-3 proposal: BLAKE. Available at: <a href="https://131002.net/blake/blake.pdf" class="uri">https://131002.net/blake/blake.pdf</a>.</p>
+</div>
+<div id="ref-Keccak">
+<p>Bertoni, G., Daemen, J., Peeters, M. &amp; Van Assche, G., 2012. The keccak sha-3 submission. Available at: <a href="https://keccak.team/files/Keccak-submission-3.pdf" class="uri">https://keccak.team/files/Keccak-submission-3.pdf</a>.</p>
+</div>
+<div id="ref-Bitcoindev">
+<p>Bitcoin Core Team, T., 2017. Bitcoin developer reference. Available at: <a href="https://bitcoin.org/en/developer-reference#block-headers" class="uri">https://bitcoin.org/en/developer-reference#block-headers</a>.</p>
+</div>
+<div id="ref-NIST">
+<p>Chang, S.-J., Perlner, R., Burr, W.E., Turan, M.S., et al., 2012. Third-round report of the sha-3 cryptographic hash algorithm competition. Available at: <a href="http://nvlpubs.nist.gov/nistpubs/ir/2012/NIST.IR.7896.pdf" class="uri">http://nvlpubs.nist.gov/nistpubs/ir/2012/NIST.IR.7896.pdf</a>.</p>
+</div>
+<div id="ref-Crosby">
+<p>Crosby, M., Nachiappan, Pattanayak, P., Verma, S., et al., 2015. BlockChain technology. Available at: <a href="http://scet.berkeley.edu/wp-content/uploads/BlockchainPaper.pdf" class="uri">http://scet.berkeley.edu/wp-content/uploads/BlockchainPaper.pdf</a>.</p>
+</div>
+<div id="ref-Skein">
+<p>Ferguson, N.L., Schneier, S., Whiting, B., Bellare, D., et al., 2010. The skein hash function family. Available at: <a href="http://www.skein-hash.info/sites/default/files/skein1.3.pdf" class="uri">http://www.skein-hash.info/sites/default/files/skein1.3.pdf</a>.</p>
+</div>
+<div id="ref-Grostl">
+<p>Gauravaram1, P., Knudsen, L.R., Matusiewicz, K., Mendel, F., et al., 2012. Grøstl – a sha-3 candidate. Available at: <a href="http://www.groestl.info/Groestl.pdf" class="uri">http://www.groestl.info/Groestl.pdf</a>.</p>
+</div>
+<div id="ref-PIVX">
+<p>jakiman, 2017. PIVX purple paper. Available at: <a href="https://pivx.org/wp-content/uploads/2017/03/PIVX-purple-paper-Technincal-Notes.pdf" class="uri">https://pivx.org/wp-content/uploads/2017/03/PIVX-purple-paper-Technincal-Notes.pdf</a>.</p>
+</div>
+<div id="ref-InstantSend">
+<p>Kiraly, B., 2017a. InstantSend. Available at: <a href="https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146928/InstantSend" class="uri">https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146928/InstantSend</a>.</p>
+</div>
+<div id="ref-PrivateSend">
+<p>Kiraly, B., 2017b. PrivateSend. Available at: <a href="https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146924/PrivateSend" class="uri">https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146924/PrivateSend</a>.</p>
+</div>
+<div id="ref-Bitcoin">
+<p>Nakamoto, S., 2009. Bitcoin: A peer-to-peer electronic cash system. Available at: <a href="https://bitcoin.org/bitcoin.pdf" class="uri">https://bitcoin.org/bitcoin.pdf</a>.</p>
+</div>
+<div id="ref-Bitcoindevreference">
+<p>Okupski, K., 2016. Bitcoin developer reference., pp.3–4. Available at: <a href="https://lopp.net/pdf/Bitcoin_Developer_Reference.pdf" class="uri">https://lopp.net/pdf/Bitcoin_Developer_Reference.pdf</a>.</p>
+</div>
+<div id="ref-Sporks">
+<p>strophy, 2017. Understanding sporks. Available at: <a href="https://dashpay.atlassian.net/wiki/spaces/DOC/pages/128319489/Understanding+Sporks" class="uri">https://dashpay.atlassian.net/wiki/spaces/DOC/pages/128319489/Understanding+Sporks</a>.</p>
+</div>
+<div id="ref-Instamine">
+<p>Wiecko, R., 2017. Dash instamine issue clarification. Available at: <a href="https://dashpay.atlassian.net/wiki/spaces/OC/pages/19759164/Dash+Instamine+Issue+Clarification" class="uri">https://dashpay.atlassian.net/wiki/spaces/OC/pages/19759164/Dash+Instamine+Issue+Clarification</a>.</p>
+</div>
+<div id="ref-JH">
+<p>Wu, H., 2012. The hash function jh. Available at: <a href="http://www3.ntu.edu.sg/home/wuhj/research/jh/jh_round3.pdf" class="uri">http://www3.ntu.edu.sg/home/wuhj/research/jh/jh_round3.pdf</a>.</p>
+</div>
+</div>
+            </body>
+</html>
+
