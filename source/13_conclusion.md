@@ -11,5 +11,5 @@ Bulwark is a privacy-oriented coin with masternodes, governance, and an evolving
 
 ## Future work
 
-The masternode privacy coin ecosystem has recently been inundated by coins seeking to entice new users through promises of substantial returns on investment, gigantic road maps filled with improbable deliverables, and a general focus on marketing over actual improvement within the space.  Bulwark plans to be the opposite: low on hype creation and high on actual creation.  Present and future goals for the project will follow the formula of being specific, measurable, attainable, relevant and time bound.
+The masternode privacy coin ecosystem has recently been inundated by coins seeking to entice new users through promises of substantial returns on investment, gigantic road maps filled with improbable deliverables, and a general focus on marketing over actual improvement within the space.  Bulwark plans to be the opposite: low on hype creation and high on actual creation.  Present and future goals for the project will follow the formula of being specific, measurable, attainable, relevant, and time bound.
 

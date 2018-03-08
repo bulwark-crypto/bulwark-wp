@@ -26,7 +26,9 @@ and add the centred logo
         SerfyWerfy (Blockchain Developer)\\
         Frogman (Communications Lead)\\
         Patrick (Brand and Design)\\
-        Stu (Ecosystem Developer)\\
+        Voxterra (Community Manager)\\
+        Kewagi (macOS Developer)\\
+        Dustin (Front-end Developer)\\
         \vspace{0.8cm}
 
         % Uncomment the following line

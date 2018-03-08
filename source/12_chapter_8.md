@@ -10,7 +10,7 @@ We are committed to adopting new protocols that will enhance the privacy of our 
 
 - I2P privacy network
 - Zerocoin protocol or Stealth addressing (Whem we are confident in the maturity of the solution)
-- Synchronizing our codebase closer with bitcoin mainline
+- Synchronizing our codebase closer with Bitcoin mainline
 - Streamlining/Updating QT Wallet
 - Libtox Integration
 - Virtualization/containerization of the Bulwark wallet to add an extra layer of security
@@ -33,4 +33,4 @@ We will continue to extend our brand and intend to work with hardware vendors an
 
 ## Design and Visual 
 
-Through Research and Development, we aim to create a visual design language for Bulwark that sets it apart from its competition in the crypto market. Our design team plans to innovate and experiment with the current UI/UX/Branding to ultimately achieve design excellence by searching for a medium that allows the best user experience, and aesthetics that are innovative and beautiful. This will be done by researching our competitors, keeping on top of current technological trends & standards and continuously striving to bring new and exciting visuals to the end-users.
+Through Research and Development, we aim to create a visual design language for Bulwark that sets it apart from its competition in the crypto market. Our design team plans to innovate and experiment with the current UI/UX/Branding to ultimately achieve design excellence by searching for a medium that allows the best user experience, and aesthetics that are innovative and beautiful. This will be done by researching our competitors, keeping on top of current technological trends & standards, and continuously striving to bring new and exciting visuals to the end-users.

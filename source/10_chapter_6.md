@@ -2,7 +2,7 @@
 
 ## Why NIST5
 
-Popularized by TalkCoin in 2014, the NIST5 hashing algorithm has seen modest mainstream usage. NIST5 can be mined on a wide array of consumer-grade hardware including CPUs, as well as AMD and NVidia GPUs.  NIST5 is not as ASIC resistant as some other memory hard algorithms, but we believe the trade-off is acceptable to improve system stability and reduce power consumption relative to those memory hard algorithms. In the event that firmware updates adding NIST5 support to ASICs arise before the end of our PoW period, we are prepared with an alternative algorithm as a replacement.  We will call for a community vote on course of action (if any) and implement accordingly.  We feel that our short PoW period and willingness to switch algorithms disincentivizes ASIC manufacturers and do not foresee an issue arising.
+Popularized by TalkCoin in 2014, the NIST5 hashing algorithm has seen modest mainstream usage. NIST5 can be mined on a wide array of consumer-grade hardware including CPUs, as well as AMD and Nvidia GPUs.  NIST5 is not as ASIC resistant as some other memory hard algorithms, but we believe the trade-off is acceptable to improve system stability and reduce power consumption relative to those memory hard algorithms. In the event that firmware updates adding NIST5 support to ASICs arise before the end of our PoW period, we are prepared with an alternative algorithm as a replacement.  We will call for a community vote on course of action (if any) and implement accordingly.  We feel that our short PoW period and willingness to switch algorithms disincentivizes ASIC manufacturers and do not foresee an issue arising.
 
 ## The Five Finalists (NIST SHA-3 Competition)
 
