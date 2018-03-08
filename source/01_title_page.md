@@ -24,6 +24,7 @@ and add the centred logo
         Eatbatterys (Project Coordinator)\\
         Jack (Marketing Director)\\
         SerfyWerfy (Blockchain Developer)\\
+        Stu (Ecosystem Developer)\\
         Frogman (Communications Lead)\\
         Patrick (Brand and Design)\\
         Voxterra (Community Manager)\\
