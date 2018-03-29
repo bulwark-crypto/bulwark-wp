@@ -23,10 +23,6 @@ Subsidy		 Block 	    	 PoW	  MN     Circulation
 
 ---------------------------------------------------------------------------
 
-Table: PoW Period Block Reward Specifications \label{ref_b_table}
-
-![PoW Period Block Reward \label{ref_d_figure}](source/figures/fig4.eps){ width=55% }
-
 \newpage
 
 ## PoS Block Rewards
