@@ -29,9 +29,9 @@ Circulation (1 Year) 		14,505,720 BWK
 
 Circulation (5 Years)		27,668,220 BWK
 
-PoW Period					\textit{nHeight} $\leq$ 345,600
+PoW Period					\textit{nHeight} $\leq$ 182,700
 
-PoS Period					\textit{nHeight} $\geq$ 345,601
+PoS Period					\textit{nHeight} $\geq$ 182,701
 
 Protocol Support			IPV4, IPV6, TOR
 
@@ -61,4 +61,4 @@ Our fair start is provided with the following code snippet (Credit: ZCash).
 
 ## Dark Gravity Wave 3.0
 
-Dark Gravity Wave is employed by Bulwark from the start as a method of retargeting PoW difficulty.  It uses a simple moving average that can respond to large nethash increases or drop-offs in just a few blocks.  This alleviates the "stuck block effect" often caused by multipools and prevents one person adding a substantial amount of computing power from instantly solving more than a few blocks.
+Dark Gravity Wave is employed by Bulwark from the start as a method of retargeting PoW difficulty. It uses a simple moving average that can respond to large nethash increases or drop-offs in just a few blocks. This alleviates the "stuck block effect" often caused by multipools and prevents one person adding a substantial amount of computing power from instantly solving more than a few blocks.
