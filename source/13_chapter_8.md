@@ -5,7 +5,7 @@
 We are committed to adopting new protocols that will enhance the privacy of our userbase. There are several paths we are evaluating at present and plan to begin internal testing and development of in the first half of 2018. Some of these enhancements include:
 
 - I2P privacy network
-- Zerocoin protocol or Stealth addressing (Whem we are confident in the maturity of the solution)
+- Zerocoin protocol or Stealth addressing (When we are confident in the maturity of the solution)
 - Synchronizing our codebase closer with Bitcoin mainline
 - Streamlining/Updating QT Wallet
 

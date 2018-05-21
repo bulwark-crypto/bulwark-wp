@@ -1,4 +1,3 @@
-\addtocontents{toc}{\protect\newpage}
 # Feature Set
 
 ## Masternodes

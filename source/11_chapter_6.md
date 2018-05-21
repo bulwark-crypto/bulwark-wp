@@ -1,3 +1,4 @@
+\addtocontents{toc}{\protect\newpage}
 # NIST5 Hashing
 
 ## Why NIST5
@@ -9,8 +10,6 @@ Popularized by TalkCoin in 2014, the NIST5 hashing algorithm has seen modest mai
 The five hashing algorithms that make up NIST5 are the finalists from the NIST Hashing Competition [@NIST]. They are (in the order that blocks are hashed):
 
 **Blake** [@Blake], **Grøstl** [@Grostl], **JH** [@JH], **Keccak** [@Keccak], and **Skein** [@Skein]
-
-\newpage
 
 ## The new SHA-3 Standard
 
