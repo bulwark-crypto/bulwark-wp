@@ -10,7 +10,7 @@ Each block on the network is prefaced with an 80 byte header containing a double
 Groups of transactions are formed into blocks and those blocks are placed chronologically into a chain - forming the blockchain. The blockchain creates a moving history of all of the activity within the network and serves as a distributed consensus model where any transaction can be verified at any time [@Crosby].
 
 ## Proof-Of-Work
-Proof-of-work is a system of verification in which miners must devote tangible resources (electricity, hardware costs) to solve an arbitrary probabilistic \textit{word puzzle}. In order for a bad actor to taint the blockchain with a fraudulent transaction, they must complete all proof-of-work up to the present point. [@Bitcoindevreference]
+Proof-of-Work is a system of verification in which miners must devote tangible resources (electricity, hardware costs) to solve an arbitrary probabilistic \textit{word puzzle}. In order for a bad actor to taint the blockchain with a fraudulent transaction, they must complete all proof-of-work up to the present point. [@Bitcoindevreference]
 
 ## Proof-Of-Stake
 Proof-of-Stake is a competition between shareholders, where based on connectivity to the network and random chance, you can receive new coins to assist in the decentralization of the network. Proof-Of-Stake is far more energy efficient in that it requires no dedicated hardware and negligible amounts of electricity to reward miners, and in many cases is far more resilient to a 51% attack on the network. [@Bitcoindevreference]
