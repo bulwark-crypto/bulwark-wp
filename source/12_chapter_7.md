@@ -22,7 +22,7 @@ Bulwark allows the user to run their full node or masternode from either an onio
 
 ## Community Importance and the Governance System
 
-The Bulwark community is the most important factor behind the long-term success of the project, and their ability to meaningfully influence the future of the coin is paramount. As such, at the end of the PoW phase we intend to activate budget superblocks on the network. These superblocks, paid monthly, will enable the community to exert meaningful control over all aspects of Bulwark's development, brand presence, and community affairs. Delaying the activation of this system will give us time to develop the underlying framework necessary for a positive user experience, and maximize block rewards available to miners and masternodes. 
+The Bulwark community is the most important factor behind the long-term success of the project, and their ability to meaningfully influence the future of the coin is paramount. As such, at the end of our first year, at block 345,601, we intend to activate budget superblocks on the network. These superblocks, paid monthly, will enable the community to exert meaningful control over all aspects of Bulwark's development, brand presence, and community affairs. Delaying the activation of this system will give us time to develop the underlying framework necessary for a positive user experience, and maximize block rewards available to miners and masternodes. 
 
 We will utilize a multi-phase process for creating and submitting proposals. Each step will need to be fully completed. Failure to complete the steps outlined will likely result in a proposal not being activated. A basic outline of these steps are as follows:
 

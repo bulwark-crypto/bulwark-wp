@@ -12,7 +12,7 @@ We are committed to adopting new protocols that will enhance the privacy of our 
 
 ## Bulwark Secure Home Node
 
-We will be working with CAD specialists to design a small, self-contained, home Bulwark node. Users will be able to connect this to their home network and configure using a Web UI. The functions we intend to launch with are as follows:
+We will be working with CAD specialists to design a small, self-contained, home Bulwark node. Users will be able to connect this to their home network and configure it using a Web UI. The functions we intend to launch with are as follows:
 
 - For those with stable internet connections, an easy to set up fully onionized masternode (or full node) using TOR hidden services
 - Bulwark staking through either virtualization or an add-on device
