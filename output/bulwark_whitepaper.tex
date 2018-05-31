@@ -306,12 +306,12 @@ ecosystem.
 \textbf{ASIC}~~~~~~~~~~~    \= \textbf{A}pplication-\textbf{S}pecific \textbf{I}ntegrated \textbf{C}ircuit\\
 \textbf{CPU}    \> \textbf{C}entral \textbf{P}rocessing \textbf{U}nit \\
 \textbf{CAD}    \> \textbf{C}omputer \textbf{A}ided \textbf{D}esign \\
-\textbf{BWK}    \> \textbf{B}ulwark \textbf{C}ryptocurrency \\
-\textbf{TOR}    \> \textbf{T}he \textbf{O}nion \textbf{N}etwork \\
+\textbf{BWK}    \> \textbf{B}ul\textbf{w}ar\textbf{k} Cryptocurrency \\
+\textbf{TOR}    \> \textbf{T}he \textbf{O}nion \textbf{R}outer \\
 \textbf{MN} \> \textbf{M}aster\textbf{N}ode \\
 \textbf{BR} \> \textbf{B}lock \textbf{R}eward \\
 \textbf{UI} \> \textbf{U}ser \textbf{I}nterface \\
-\textbf{UX} \> \textbf{U}ser \textbf{E}xperience \\
+\textbf{UX} \> \textbf{U}ser E\textbf{x}perience \\
 \end{tabbing}
 
 \newpage
@@ -355,7 +355,7 @@ transaction can be verified at any time (Crosby et al. 2015).
 
 \section{Proof-Of-Work}\label{proof-of-work}
 
-Proof-of-work is a system of verification in which miners must devote
+Proof-of-Work is a system of verification in which miners must devote
 tangible resources (electricity, hardware costs) to solve an arbitrary
 probabilistic \textit{word puzzle}. In order for a bad actor to taint
 the blockchain with a fraudulent transaction, they must complete all
@@ -363,12 +363,13 @@ proof-of-work up to the present point. (Okupski 2016)
 
 \section{Proof-Of-Stake}\label{proof-of-stake}
 
-Proof-Of-Stake is a system of verification in which the creator of the
-next block is picked utilizing variables such as coin count, age of
-coins, as well as other randomizing factors to assist in centralization
-prevention. Proof-Of-Stake is far more energy efficient in that it
-requires no dedicated hardware and negligible amounts of electricity to
-reward miners.
+Proof-of-Stake is a competition between shareholders, where based on
+connectivity to the network and random chance, you can receive new coins
+to assist in the decentralization of the network. Proof-Of-Stake is far
+more energy efficient in that it requires no dedicated hardware and
+negligible amounts of electricity to reward miners, and in many cases is
+far more resilient to a 51\% attack on the network. (Blackcoin Core Team
+2016)
 
 \chapter{Introducing Bulwark}\label{introducing-bulwark}
 
@@ -1027,14 +1028,14 @@ System}\label{community-importance-and-the-governance-system}
 
 The Bulwark community is the most important factor behind the long-term
 success of the project, and their ability to meaningfully influence the
-future of the coin is paramount. As such, at the end of the PoW phase we
-intend to activate budget superblocks on the network. These superblocks,
-paid monthly, will enable the community to exert meaningful control over
-all aspects of Bulwark's development, brand presence, and community
-affairs. Delaying the activation of this system will give us time to
-develop the underlying framework necessary for a positive user
-experience, and maximize block rewards available to miners and
-masternodes.
+future of the coin is paramount. As such, at the end of our first year,
+at block 345,601, we intend to activate budget superblocks on the
+network. These superblocks, paid monthly, will enable the community to
+exert meaningful control over all aspects of Bulwark's development,
+brand presence, and community affairs. Delaying the activation of this
+system will give us time to develop the underlying framework necessary
+for a positive user experience, and maximize block rewards available to
+miners and masternodes.
 
 We will utilize a multi-phase process for creating and submitting
 proposals. Each step will need to be fully completed. Failure to
@@ -1143,8 +1144,8 @@ of 2018. Some of these enhancements include:
 
 We will be working with CAD specialists to design a small,
 self-contained, home Bulwark node. Users will be able to connect this to
-their home network and configure using a Web UI. The functions we intend
-to launch with are as follows:
+their home network and configure it using a Web UI. The functions we
+intend to launch with are as follows:
 
 \begin{itemize}
 \tightlist
@@ -1234,6 +1235,11 @@ sha-3 submission. Available at:
 \hypertarget{ref-Bitcoindev}{}
 Bitcoin Core Team, T., 2017. Bitcoin developer reference. Available at:
 \url{https://bitcoin.org/en/developer-reference\#block-headers}.
+
+\hypertarget{ref-Blackcoin}{}
+Blackcoin Core Team, T., 2016. Security analysis of proof-of-stake
+protocol v3.0. Available at:
+\url{https://bravenewcoin.com/assets/Whitepapers/Blackcoin-POS-3.pdf}.
 
 \hypertarget{ref-NIST}{}
 Chang, S.-J., Perlner, R., Burr, W.E., Turan, M.S., et al., 2012.
