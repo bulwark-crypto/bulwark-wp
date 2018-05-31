@@ -9,7 +9,7 @@
 \textbf{MN}	\> \textbf{M}aster\textbf{N}ode \\
 \textbf{BR}	\> \textbf{B}lock \textbf{R}eward \\
 \textbf{UI}	\> \textbf{U}ser \textbf{I}nterface \\
-\textbf{UX}	\> \textbf{U}ser \textbf{E}xperience \\
+\textbf{UX}	\> \textbf{U}ser E/textbf{x}perience \\
 \end{tabbing}
 
 \newpage
