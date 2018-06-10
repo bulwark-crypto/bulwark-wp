@@ -57,7 +57,7 @@ Our fair start is provided with the following code snippet (Credit: ZCash).
             nSlowSubsidy /= 960;		// Credits: ZCASH Team
             nSlowSubsidy *= nHeight;
 ```
-
+The slow start period averages at 25 coins per block at block 960.
 
 ## Dark Gravity Wave 3.0
 
