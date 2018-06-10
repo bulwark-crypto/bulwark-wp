@@ -64,9 +64,11 @@ Subsidy	  Block              Budget      Circulation         Note
 
 1.9530    1641601-1728000    10%         27442746.6          Year 5
 
-1.6250    1728001+           10%         Åá                   In perpetuity
+1.6250    1728001+           10%         Infinity            In perpetuity
 ---------------------------------------------------------------------------
 
 Table: PoS Period Block Reward Specifications \label{ref_c_table}
+
 \textit{During the PoS phase, the divide between staking rewards and masternodes will be decided by the SeeSaw mechanic described in chapter 6.7.}
+
 \newpage
