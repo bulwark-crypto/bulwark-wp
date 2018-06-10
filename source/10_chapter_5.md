@@ -64,7 +64,11 @@ Subsidy	  Block              Budget      Circulation         Note
 
 1.9530    1641601-1728000    10%         27442696.6          Year 5
 
+<<<<<<< HEAD
 1.6250    1728001+           10%         ‡                   In perpetuity
+=======
+1.6250    1728000+           10%         ‡                   In perpetuity
+>>>>>>> master
 ---------------------------------------------------------------------------
 
 Table: PoS Period Block Reward Specifications \label{ref_c_table}
