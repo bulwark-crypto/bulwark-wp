@@ -69,6 +69,6 @@ Subsidy	  Block              Budget      Circulation         Note
 
 Table: PoS Period Block Reward Specifications \label{ref_c_table}
 
-\textit{During the PoS phase, the divide between staking rewards and masternodes will be decided by the SeeSaw mechanic described in chapter 6.7.}
+\textit{Between blocks 182,701 and 200,000, the divide between staking rewards and masternodes will be decided by the SeeSaw mechanic described in chapter 6.7.}
 
 \newpage
