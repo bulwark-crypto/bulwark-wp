@@ -26,7 +26,7 @@ Subsidy		 Block 	    	 PoW	  MN     Circulation
 ## PoS Block Rewards
 
 ---------------------------------------------------------------------------
-Subsidy	  Block 		      Budget		  PoS/Masternode		  Note
+Subsidy	  Block 		      Budget		  MN / PoS		  Note
 --------  --------------- ----------- ------------------- ----------
 37.500    182701-199999     0%        \textit{SeeSaw}     Year 1
 
