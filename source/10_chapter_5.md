@@ -67,6 +67,7 @@ Subsidy	  Block 		      Budget		  MN / PoS		  Note
 1.9530    1641601-1728000  10%		  	60% MN / 30% PoS		Year 5
 
 1.6250    1728000+         10%        60% MN / 30% PoS    In perpetuity
+
 ---------------------------------------------------------------------------
 
 Table: PoS Period Block Reward Specifications \label{ref_c_table}
