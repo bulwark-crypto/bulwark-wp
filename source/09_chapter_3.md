@@ -35,7 +35,7 @@ PoS Period					\textit{nHeight} $\geq$ 182,701
 
 Protocol Support			IPV4, IPV6, TOR
 
-PoS 						Blackcoin v3.0 PoS, PIVX SeeSaw rewards.
+PoS 						Blackcoin v3.0 PoS
 
 ---------------------------------------------------------------------------
 
