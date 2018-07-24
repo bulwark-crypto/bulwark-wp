@@ -15,3 +15,7 @@ At the time of writing, there have been an influx of cryptocurrencies utilizing 
 ## Fast and functional
 
 With a 90 second block time, masternode consensus and transaction locking, reasonable emissions schedule, and eco-friendly staking, Bulwark aspires to be a truly fast and functional cryptocurrency.
+
+## Privacy Hardware Development 
+
+Bulwark has elected to put its primary focus on developing a number of privacy hardware developments to enhance a user's abilities to retain their freedom and privacy while providing a justifiable price point. Some of these developments are discussed more in depth in Chapter 7 (The Future) and include staking boxes, secure local masternode hosting solutions, hardware wallets, and network routers.
