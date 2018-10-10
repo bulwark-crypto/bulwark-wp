@@ -8,6 +8,18 @@ Masternodes are, essentially, a decentralized web of computers that serve the Bu
 
 Bulwark features Obfuscation, based on CoinJoin but with various improvements over the original, and done via coin mixing in a decentralized fashion facilitated by the network of masternodes. This provides an additional layer of privacy in transactions. While not perfectly anonymous, Obfuscation via node mixing it is far better than the standard Bitcoin transaction. For example, all Bitcoin transactions are transparent. For Bulwark, a nefarious actor would need to control 50% of the operating masternodes to have less than 0.5% chance of de-anonymizing a single transaction that was mixed with 8 rounds of Obfuscation [@PrivateSend]. This important feature provides a high-level of anonymity for BWK users that elect to obfuscate their transactions.
 
+Note: In October 2018 Bulwark elected to remove Obfuscation in favor of Zerocoin
+
+## Zerocoin Protocol
+
+Zerocoin is "a distributed e-cash system that uses cryptographic techniques to break the link between individual Bitcoin transactions without adding trusted parties." Miers, Ian; Garman, Christina; Green, Matthew; Rubin, Aviel D. (May 2013).
+
+There are two parts to Zerocoin, minting and spending. During the minting process, the user performs a mint transaction which trades a certain denomination of Bulwark (1, 5, 10, 50, 100, 500, 1000) and produces a reciprocal quantity of zBWK. The user is then provided zBWK as well as a secret key, presenting the network with proof that the user is entitled to the appropriate number of zBWK.
+
+During the spending process, the user provides the network proof that they own the amount of zBWK they are attempting to allocate. The network verifies this with the aforementioned secret key and authorizes the transaction. The zBWK is then removed from the secure public pool and sent to the chosen BWK address. From the user's standpoint they are simply sending zBWK to a BWK address and the network handles the validation process.
+
+Zerocoin achieves this level of anonymity by utilizing zBWK in the public pool. No information is logged or tracked in regards to who is claiming or spending zBWK.
+
 ## SwiftTX
 
 SwiftTX provides masternodes with locking and consensus authority for transactions. When a transaction is submitted to the network, a group of masternodes will validate the transaction. If those masternodes reach consensus on the transaction’s validity it will be locked for later introduction into the blockchain, greatly increasing transaction speed compared to conventional systems (like Bitcoin’s 10 minute block times with multiple confirmations). SwiftTX makes it possible for multiple transactions to take place before a block on the network is mined with the same inputs. This system is based on Dash's InstantSend. [@InstantSend].
