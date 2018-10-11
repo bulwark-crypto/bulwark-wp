@@ -11,8 +11,7 @@ Bulwark features Obfuscation, based on CoinJoin but with various improvements ov
 Note: In October 2018 Bulwark elected to remove Obfuscation in favor of Zerocoin
 
 ## Zerocoin Protocol
-
-Zerocoin is "a distributed e-cash system that uses cryptographic techniques to break the link between individual Bitcoin transactions without adding trusted parties." Miers, Ian; Garman, Christina; Green, Matthew; Rubin, Aviel D. (May 2013).
+Zerocoin is "a distributed e-cash system that uses cryptographic techniques to break the link between individual Bitcoin transactions without adding trusted parties." [@Zerocoin]
 
 There are two parts to Zerocoin, minting and spending. During the minting process, the user performs a mint transaction which trades a certain denomination of Bulwark (1, 5, 10, 50, 100, 500, 1000) and produces a reciprocal quantity of zBWK. The user is then provided zBWK as well as a secret key, presenting the network with proof that the user is entitled to the appropriate number of zBWK.
 
