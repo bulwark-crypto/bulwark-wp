@@ -18,65 +18,15 @@
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
+\usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
-\usepackage[unicode=true]{hyperref}
-\hypersetup{
+\usepackage{hyperref}
+\hypersetup{unicode=true,
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\newenvironment{Shaded}{}{}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
-% Fix footnotes in tables (requires footnote package)
-\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
-\usepackage{graphicx,grffile}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 \IfFileExists{parskip.sty}{%
 \usepackage{parskip}
 }{% else
@@ -96,12 +46,6 @@
 \let\oldsubparagraph\subparagraph
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
-
-% set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-
 
 
 % Table of contents formatting
@@ -241,16 +185,18 @@
 
         \normalsize
         The Bulwark Core Team\\
-        May 2018
+        October 2018
 
     \normalsize
-    Version 1.2
+    Version 1.4
         % Except where otherwise noted, content in this thesis is licensed under a Creative Commons Attribution 4.0 License (http://creativecommons.org/licenses/by/4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
 
     \end{center}
 \end{titlepage}
 
-\vspace*{\fill} \noindent
+\vspace*{\fill}
+
+\noindent
 \textit{
 We, The Bulwark Core Team, confirm that the work presented in this whitepaper is our own. Where information has been derived from other sources, we confirm that this has been indicated in the attributions.
 } \vspace*{\fill} \pagenumbering{gobble}
@@ -267,18 +213,18 @@ privacy coin that works today and into the future by leveraging
 best-practices from both DASH and PIVX. No fanciful visions with a
 limited prospect of delivery, but a working coin on a working platform
 with support into the future. This does not mean we plan no innovation,
-but instead that we will deliver results rather than hype. There are too
-many coins that are fueled by hype - but completely devoid of substance
-- and we do not want to join the growing cadre of coins driven by the
-motto of over-promise and under deliver. With no ICO, a soft-launch
-reward ramp, small premine, and miner-favored block reward allocations,
-Bulwark adopters will have ground-floor access to a privacy coin
-offering a blend of masternodes and the best available privacy coin
-technology alongside a meaningful development roadmap. Masternodes will
-be available, and functioning, on launch and are a fundamental part of
-this coin's vision and will stabilize circulation, secure the network,
-and provide important functionality. \pagenumbering{roman}
-\setcounter{page}{1}
+but instead that we will deliver results rather than hype. Bulwark's
+main focus will be on a number of privacy hardware developments that
+will expand upon the capabilities of our blockchain while also offering
+additional privacy enhancements for those that choose to build or
+acquire them. With no ICO, a soft-launch reward ramp, small premine, and
+miner-favored block reward allocations, Bulwark adopters will have
+ground-floor access to a privacy coin offering a blend of masternodes
+and the best available privacy hardware technology alongside a
+meaningful development roadmap. Masternodes will be available, and
+functioning, on launch and are a fundamental part of this coin's vision
+and will stabilize circulation, secure the network, and provide
+important functionality. \pagenumbering{roman} \setcounter{page}{1}
 
 \chapter*{Acknowledgements}\label{acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
@@ -361,6 +307,9 @@ probabilistic \textit{word puzzle}. In order for a bad actor to taint
 the blockchain with a fraudulent transaction, they must complete all
 proof-of-work up to the present point. (Okupski 2016)
 
+Note: Bulwark is no longer Proof Of Work and transitioned into Proof of
+Stake in June 2018.
+
 \section{Proof-Of-Stake}\label{proof-of-stake}
 
 Proof-of-Stake is a competition between shareholders, where based on
@@ -408,6 +357,16 @@ With a 90 second block time, masternode consensus and transaction
 locking, reasonable emissions schedule, and eco-friendly staking,
 Bulwark aspires to be a truly fast and functional cryptocurrency.
 
+\section{Privacy Hardware
+Development}\label{privacy-hardware-development}
+
+Bulwark has elected to put its primary focus on developing a number of
+privacy hardware developments to enhance a user's abilities to retain
+their freedom and privacy while providing a justifiable price point.
+Some of these developments are discussed more in depth in Chapter 7 (The
+Future) and include staking boxes, secure local masternode hosting
+solutions, hardware wallets, and network routers.
+
 \chapter{Our Blockchain Parameters.}\label{our-blockchain-parameters.}
 
 \section{Bulwark Specifications at a
@@ -415,100 +374,117 @@ Glance}\label{bulwark-specifications-at-a-glance}
 
 \ref{ref_a_table}
 
-\begin{longtable}[]{@{}ll@{}}
+\begin{longtable}[c]{@{}ll@{}}
 \caption{At a glance specifications for Bulwark
 \label{ref_a_table}}\tabularnewline
 \toprule
 \begin{minipage}[b]{0.35\columnwidth}\raggedright\strut
-Specification\strut
-\end{minipage} & \begin{minipage}[b]{0.59\columnwidth}\raggedright\strut
-Descriptor\strut
-\end{minipage}\tabularnewline
+Specification
+\strut\end{minipage} &
+\begin{minipage}[b]{0.59\columnwidth}\raggedright\strut
+Descriptor
+\strut\end{minipage}\tabularnewline
 \midrule
 \endfirsthead
 \toprule
 \begin{minipage}[b]{0.35\columnwidth}\raggedright\strut
-Specification\strut
-\end{minipage} & \begin{minipage}[b]{0.59\columnwidth}\raggedright\strut
-Descriptor\strut
-\end{minipage}\tabularnewline
+Specification
+\strut\end{minipage} &
+\begin{minipage}[b]{0.59\columnwidth}\raggedright\strut
+Descriptor
+\strut\end{minipage}\tabularnewline
 \midrule
 \endhead
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-Ticker\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-BWK\strut
-\end{minipage}\tabularnewline
+Ticker
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+BWK
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-Algorithm\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-NIST5\strut
-\end{minipage}\tabularnewline
+Algorithm
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+NIST5
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-RPC Port\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-52541\strut
-\end{minipage}\tabularnewline
+RPC Port
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+52541
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-P2P Port\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-52543\strut
-\end{minipage}\tabularnewline
+P2P Port
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+52543
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-Block Spacing\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-90 Seconds\strut
-\end{minipage}\tabularnewline
+Block Spacing
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+90 Seconds
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-Difficulty Algorithm\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-Dark Gravity Wave v3.0\strut
-\end{minipage}\tabularnewline
+Difficulty Algorithm
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+Dark Gravity Wave v3.0
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-Block Size\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-1MB\strut
-\end{minipage}\tabularnewline
+Block Size
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+1MB
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-Mined/Minted Maturity\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-67 Blocks (\textasciitilde{}100 Minutes)\strut
-\end{minipage}\tabularnewline
+Mined/Minted Maturity
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+67 Blocks (\textasciitilde{}100 Minutes)
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-Confirmation\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-6 Blocks (\textasciitilde{}9 Minutes)\strut
-\end{minipage}\tabularnewline
+Confirmation
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+6 Blocks (\textasciitilde{}9 Minutes)
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-Circulation (1 Year)\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-14,505,720 BWK\strut
-\end{minipage}\tabularnewline
+Circulation (1 Year)
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+14,505,720 BWK
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-Circulation (5 Years)\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-27,668,220 BWK\strut
-\end{minipage}\tabularnewline
+Circulation (5 Years)
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+27,668,220 BWK
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-PoW Period\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-\textit{nHeight} \(\leq\) 182,700\strut
-\end{minipage}\tabularnewline
+PoW Period
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+\textit{nHeight} \(\leq\) 182,700
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-PoS Period\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-\textit{nHeight} \(\geq\) 182,701\strut
-\end{minipage}\tabularnewline
+PoS Period
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+\textit{nHeight} \(\geq\) 182,701
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-Protocol Support\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-IPV4, IPV6, TOR\strut
-\end{minipage}\tabularnewline
+Protocol Support
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+IPV4, IPV6, TOR
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.35\columnwidth}\raggedright\strut
-PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
-Blackcoin v3.0 PoS, PIVX SeeSaw rewards.\strut
-\end{minipage}\tabularnewline
+PoS
+\strut\end{minipage} &
+\begin{minipage}[t]{0.59\columnwidth}\raggedright\strut
+Blackcoin v3.0 PoS
+\strut\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -519,19 +495,17 @@ Blackcoin v3.0 PoS, PIVX SeeSaw rewards.\strut
 Our fair start is provided with the following code snippet (Credit:
 ZCash).
 
-\begin{Shaded}
-\begin{Highlighting}[]
+\begin{verbatim}
 
-        \DataTypeTok{int64_t}\NormalTok{ nSlowSubsidy = }\DecValTok{50}\NormalTok{ * COIN;}
+        int64_t nSlowSubsidy = 50 * COIN;
 
-        \ControlFlowTok{if}\NormalTok{ (nHeight < }\DecValTok{960}\NormalTok{ / }\DecValTok{2}\NormalTok{) \{        }\CommentTok{// If block height less than 480,}
-\NormalTok{           nSlowSubsidy /= }\DecValTok{960}\NormalTok{;         }\CommentTok{// Set nSubsidy to .05208333}
-\NormalTok{           nSlowSubsidy *= nHeight;     }\CommentTok{// Multiply present height by .05208333}
-\NormalTok{        \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (nHeight < }\DecValTok{960}\NormalTok{ \{      }\CommentTok{// ex: Block 200, BR will be 10.41666600}
-\NormalTok{            nSlowSubsidy /= }\DecValTok{960}\NormalTok{;        }\CommentTok{// Credits: ZCASH Team}
-\NormalTok{            nSlowSubsidy *= nHeight;}
-\end{Highlighting}
-\end{Shaded}
+        if (nHeight < 960 / 2) {        // If block height less than 480,
+           nSlowSubsidy /= 960;         // Set nSubsidy to .05208333
+           nSlowSubsidy *= nHeight;     // Multiply present height by .05208333
+        } else if (nHeight < 960 {      // ex: Block 200, BR will be 10.41666600
+            nSlowSubsidy /= 960;        // Credits: ZCASH Team
+            nSlowSubsidy *= nHeight;
+\end{verbatim}
 
 The slow start period averages at 25 coins per block at block 960.
 
@@ -548,98 +522,130 @@ from instantly solving more than a few blocks.
 
 \section{PoW Block Rewards}\label{pow-block-rewards}
 
-\begin{longtable}[]{@{}lllcl@{}}
+\begin{longtable}[c]{@{}lllcl@{}}
 \toprule
 \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-Subsidy\strut
-\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
-Block\strut
-\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedright\strut
-PoW\strut
-\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\centering\strut
-MN\strut
-\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-Circulation\strut
-\end{minipage}\tabularnewline
+Subsidy
+\strut\end{minipage} &
+\begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
+Block
+\strut\end{minipage} &
+\begin{minipage}[b]{0.10\columnwidth}\raggedright\strut
+PoW
+\strut\end{minipage} &
+\begin{minipage}[b]{0.10\columnwidth}\centering\strut
+MN
+\strut\end{minipage} &
+\begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+Circulation
+\strut\end{minipage}\tabularnewline
 \midrule
 \endhead
 \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-489720\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
-100\%\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-NA\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-489200\strut
-\end{minipage}\tabularnewline
+489720
+\strut\end{minipage} &
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+1
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+100\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\centering\strut
+NA
+\strut\end{minipage} &
 \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-\textasciitilde{}25(avg)\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-2-960\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
-100\%\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-NA\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-513150\strut
-\end{minipage}\tabularnewline
+489200
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-50.000\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-961-28800\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
-80\%\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-20\%\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-1953150\strut
-\end{minipage}\tabularnewline
+\textasciitilde{}25(avg)
+\strut\end{minipage} &
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+2-960
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+100\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\centering\strut
+NA
+\strut\end{minipage} &
 \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-50.000\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-28801-57600\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
-75\%\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-25\%\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-3393150\strut
-\end{minipage}\tabularnewline
+513150
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-50.000\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-57601-86400\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
-66\%\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-33\%\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-4833150\strut
-\end{minipage}\tabularnewline
+50.000
+\strut\end{minipage} &
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+961-28800
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+80\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\centering\strut
+20\%
+\strut\end{minipage} &
 \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-43.750\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-86401-172800\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
-50\%\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-50\%\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-8613150\strut
-\end{minipage}\tabularnewline
+1953150
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-37.500\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-172801-182700\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
-50\%\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering\strut
-50\%\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-371212\strut
-\end{minipage}\tabularnewline
+50.000
+\strut\end{minipage} &
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+28801-57600
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+75\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\centering\strut
+25\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+3393150
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+50.000
+\strut\end{minipage} &
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+57601-86400
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+66\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\centering\strut
+33\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+4833150
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+43.750
+\strut\end{minipage} &
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+86401-172800
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+50\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\centering\strut
+50\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+8613150
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+37.500
+\strut\end{minipage} &
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+172801-182700
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+50\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\centering\strut
+50\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+371212
+\strut\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -647,333 +653,283 @@ NA\strut
 
 \section{PoS Block Rewards}\label{pos-block-rewards}
 
-\begin{longtable}[]{@{}llccc@{}}
+\begin{longtable}[c]{@{}llll@{}}
 \caption{PoS Period Block Reward Specifications
 \label{ref_c_table}}\tabularnewline
 \toprule
 \begin{minipage}[b]{0.12\columnwidth}\raggedright\strut
-Subsidy\strut
-\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
-Block\strut
-\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\centering\strut
-Budget\strut
-\end{minipage} & \begin{minipage}[b]{0.24\columnwidth}\centering\strut
-MN / PoS\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\centering\strut
-Note\strut
-\end{minipage}\tabularnewline
+Subsidy
+\strut\end{minipage} &
+\begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+Block
+\strut\end{minipage} &
+\begin{minipage}[b]{0.15\columnwidth}\raggedright\strut
+Budget
+\strut\end{minipage} &
+\begin{minipage}[b]{0.27\columnwidth}\raggedright\strut
+MN / PoS
+\strut\end{minipage}\tabularnewline
 \midrule
 \endfirsthead
 \toprule
 \begin{minipage}[b]{0.12\columnwidth}\raggedright\strut
-Subsidy\strut
-\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
-Block\strut
-\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\centering\strut
-Budget\strut
-\end{minipage} & \begin{minipage}[b]{0.24\columnwidth}\centering\strut
-MN / PoS\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\centering\strut
-Note\strut
-\end{minipage}\tabularnewline
+Subsidy
+\strut\end{minipage} &
+\begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+Block
+\strut\end{minipage} &
+\begin{minipage}[b]{0.15\columnwidth}\raggedright\strut
+Budget
+\strut\end{minipage} &
+\begin{minipage}[b]{0.27\columnwidth}\raggedright\strut
+MN / PoS
+\strut\end{minipage}\tabularnewline
 \midrule
 \endhead
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-37.500\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-182701-199999\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-0\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-\textit{SeeSaw}\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 1\strut
-\end{minipage}\tabularnewline
+37.500
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+182701-199999
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+0\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+\textit{SeeSaw}
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-37.500\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-200000-259200\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-0\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-65\% MN / 35\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 1\strut
-\end{minipage}\tabularnewline
+37.500
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+200000-259200
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+0\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+65\% MN / 35\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-31.250\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-259201-345600\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-0\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-65\% MN / 35\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 1\strut
-\end{minipage}\tabularnewline
+31.250
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+259201-345600
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+0\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+65\% MN / 35\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-25.000\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-345601-432000\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 2\strut
-\end{minipage}\tabularnewline
+25.000
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+345601-432000
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-21.875\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-432001-518400\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 2\strut
-\end{minipage}\tabularnewline
+21.875
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+432001-518400
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-18.750\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-518401-604800\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 2\strut
-\end{minipage}\tabularnewline
+18.750
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+518401-604800
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-15.625\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-604801-691200\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 2\strut
-\end{minipage}\tabularnewline
+15.625
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+604801-691200
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-10.250\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-691201-777600\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 3\strut
-\end{minipage}\tabularnewline
+12.500
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+691201-777600
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-10.938\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-777601-864000\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 3\strut
-\end{minipage}\tabularnewline
+10.938
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+777601-864000
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-9.3750\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-864001-950400\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 3\strut
-\end{minipage}\tabularnewline
+9.3750
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+864001-950400
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-7.8120\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-950401-1036800\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 3\strut
-\end{minipage}\tabularnewline
+7.8120
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+950401-1036800
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-6.2500\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-1036801-1123200\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 4\strut
-\end{minipage}\tabularnewline
+6.2500
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+1036801-1123200
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-5.4690\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-1123201-1209600\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 4\strut
-\end{minipage}\tabularnewline
+5.4690
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+1123201-1209600
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-4.6880\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-1209601-1296000\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 4\strut
-\end{minipage}\tabularnewline
+4.6880
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+1209601-1296000
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-3.9060\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-1296000-1382400\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 4\strut
-\end{minipage}\tabularnewline
+3.9060
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+1296000-1382400
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-3.1250\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-1382401-1468800\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 5\strut
-\end{minipage}\tabularnewline
+3.1250
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+1382401-1468800
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-2.7340\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-1468801-1555200\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 5\strut
-\end{minipage}\tabularnewline
+2.7340
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+1468801-1555200
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-2.3440\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-1555201-1641600\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 5\strut
-\end{minipage}\tabularnewline
+2.3440
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+1555201-1641600
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-1.9530\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-1641601-1728000\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-Year 5\strut
-\end{minipage}\tabularnewline
+1.9530
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+1641601-1728000
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedright\strut
-1.6250\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-1728000+\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
-10\%\strut
-\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\centering\strut
-60\% MN / 30\% PoS\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering\strut
-In perpetuity\strut
-\end{minipage}\tabularnewline
+1.6250
+\strut\end{minipage} &
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+1728000+
+\strut\end{minipage} &
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+10\%
+\strut\end{minipage} &
+\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
+60\% MN / 30\% PoS
+\strut\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
 \newpage
-
-\addtocontents{toc}{\protect\newpage}
-
-\chapter{NIST5 Hashing}\label{nist5-hashing}
-
-\section{Why NIST5}\label{why-nist5}
-
-Popularized by TalkCoin in 2014, the NIST5 hashing algorithm has seen
-modest mainstream usage. NIST5 can be mined on a wide array of
-consumer-grade hardware including CPUs, as well as AMD and Nvidia GPUs.
-NIST5 is not as ASIC resistant as some other memory hard algorithms, but
-we believe the trade-off is acceptable to improve system stability and
-reduce power consumption relative to those memory hard algorithms.
-
-\section{The Five Finalists (NIST SHA-3
-Competition)}\label{the-five-finalists-nist-sha-3-competition}
-
-The five hashing algorithms that make up NIST5 are the finalists from
-the NIST Hashing Competition (Chang et al. 2012). They are (in the order
-that blocks are hashed):
-
-\textbf{Blake} (Aumasson 2010), \textbf{Grøstl} (Gauravaram1 et al.
-2011), \textbf{JH} (Wu 2012), \textbf{Keccak} (Bertoni et al. 2012), and
-\textbf{Skein} (Ferguson et al. 2010)
-
-\section{The new SHA-3 Standard}\label{the-new-sha-3-standard}
-
-Keccak eventually passed the final round to be named the new SHA-3
-hashing function, while the other four algorithms (despite being
-considered cryptographically secure) lost a few points from the judges
-for some minor technicalities. We believe the combination of the new
-SHA-3 standard along with the other finalist choices provide a quick,
-secure, and established hashing algorithm.
-
-\section{Mining Software Available}\label{mining-software-available}
-
-At the time of writing, there are several options for miners
-
-\begin{longtable}[]{@{}lll@{}}
-\toprule
-\begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
-Name\strut
-\end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
-Platform\strut
-\end{minipage} & \begin{minipage}[b]{0.44\columnwidth}\raggedright\strut
-Link\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-SGMiner-5.0\strut
-\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-OpenCL\strut
-\end{minipage} & \begin{minipage}[t]{0.44\columnwidth}\raggedright\strut
-\href{https://github.com/genesismining/sgminer-gm}{GitHub}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-ccminer-2.2.2\strut
-\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-CUDA\strut
-\end{minipage} & \begin{minipage}[t]{0.44\columnwidth}\raggedright\strut
-\href{https://github.com/tpruvot/ccminer}{GitHub}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
-cpuminer-opt\strut
-\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-CPU\strut
-\end{minipage} & \begin{minipage}[t]{0.44\columnwidth}\raggedright\strut
-\href{https://github.com/tpruvot/cpuminer-multi}{GitHub}\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
 
 \chapter{Feature Set}\label{feature-set}
 
@@ -1000,6 +956,34 @@ are transparent. For Bulwark, a nefarious actor would need to control
 de-anonymizing a single transaction that was mixed with 8 rounds of
 Obfuscation (Kiraly 2017b). This important feature provides a high-level
 of anonymity for BWK users that elect to obfuscate their transactions.
+
+Note: In October 2018 Bulwark elected to remove Obfuscation in favor of
+Zerocoin
+
+\section{Zerocoin Protocol}\label{zerocoin-protocol}
+
+Zerocoin is ``a distributed e-cash system that uses cryptographic
+techniques to break the link between individual Bitcoin transactions
+without adding trusted parties.'' (Miers 2013)
+
+There are two parts to Zerocoin, minting and spending. During the
+minting process, the user performs a mint transaction which trades a
+certain denomination of Bulwark (1, 5, 10, 50, 100, 500, 1000) and
+produces a reciprocal quantity of zBWK. The user is then provided zBWK
+as well as a secret key, presenting the network with proof that the user
+is entitled to the appropriate number of zBWK.
+
+During the spending process, the user provides the network proof that
+they own the amount of zBWK they are attempting to allocate. The network
+verifies this with the aforementioned secret key and authorizes the
+transaction. The zBWK is then removed from the secure public pool and
+sent to the chosen BWK address. From the user's standpoint they are
+simply sending zBWK to a BWK address and the network handles the
+validation process.
+
+Zerocoin achieves this level of anonymity by utilizing zBWK in the
+public pool. No information is logged or tracked in regards to who is
+claiming or spending zBWK.
 
 \section{SwiftTX}\label{swifttx}
 
@@ -1098,25 +1082,11 @@ activated. A basic outline of these steps are as follows:
   proposal to be paid.
 \end{itemize}
 
-\section{SeeSaw PoS/Masternode
-Rewards}\label{seesaw-posmasternode-rewards}
+\section{PoS/Masternode Rewards}\label{posmasternode-rewards}
 
-We have decided to utilize the SeeSaw reward system popularized by PIVX
-(Jakiman 2017). The SeeSaw reward system begins with a 9:1 block reward
-ratio (favoring masternodes), and smoothly adjusts the ratio of reward
-between staking and node operators until around 41.5\% of coins in
-circulation are locked into masternodes, at which time staking rewards
-reach a slight advantage over masternode rewards on a coin-by-coin
-basis. The reason we have the SeeSaw slightly favoring staking rewards
-is because we want to avoid the problems - like significant price
-volatility and low liquidity - that impact coins with very-high
-percentages of their circulating supply locked in nodes. This strategy
-will mitigate user frustration over access to coin supply and maintains
-the relevance of our robust network. With one of our goals being a
-well-supported platform for anonymous commerce, transactability is of
-the utmost importance to those accepting Bulwark and those holding
-Bulwark.
-\includegraphics[width=1.00000\textwidth]{source/figures/fig.png}
+Bulwark has decided to utilize a reward system of 65\% MN/35\% PoS block
+reward split until governance goes live, where it will remove 5\% from
+each, resulting in 60\% MN/ 30\% PoS/ 10\% Governance.
 
 \newpage
 
@@ -1251,15 +1221,6 @@ relevant, and time bound.
 \addcontentsline{toc}{chapter}{References}
 
 \hypertarget{refs}{}
-\hypertarget{ref-Blake}{}
-Aumasson, L.M., Jean-Phillipe Henzen, 2010. SHA-3 proposal: BLAKE.
-Available at: \url{https://131002.net/blake/blake.pdf}.
-
-\hypertarget{ref-Keccak}{}
-Bertoni, G., Daemen, J., Peeters, M. \& Van Assche, G., 2012. The keccak
-sha-3 submission. Available at:
-\url{https://keccak.team/files/Keccak-submission-3.pdf}.
-
 \hypertarget{ref-Bitcoindev}{}
 Bitcoin Core Team, T., 2017. Bitcoin developer reference. Available at:
 \url{https://bitcoin.org/en/developer-reference\#block-headers}.
@@ -1269,30 +1230,10 @@ Blackcoin Core Team, T., 2016. Security analysis of proof-of-stake
 protocol v3.0. Available at:
 \url{https://bravenewcoin.com/assets/Whitepapers/Blackcoin-POS-3.pdf}.
 
-\hypertarget{ref-NIST}{}
-Chang, S.-J., Perlner, R., Burr, W.E., Turan, M.S., et al., 2012.
-Third-round report of the sha-3 cryptographic hash algorithm
-competition. Available at:
-\url{http://nvlpubs.nist.gov/nistpubs/ir/2012/NIST.IR.7896.pdf}.
-
 \hypertarget{ref-Crosby}{}
 Crosby, M., Nachiappan, Pattanayak, P., Verma, S., et al., 2015.
 BlockChain technology. Available at:
 \url{http://scet.berkeley.edu/wp-content/uploads/BlockchainPaper.pdf}.
-
-\hypertarget{ref-Skein}{}
-Ferguson, N.L., Schneier, S., Whiting, B., Bellare, D., et al., 2010.
-The skein hash function family. Available at:
-\url{http://www.skein-hash.info/sites/default/files/skein1.3.pdf}.
-
-\hypertarget{ref-Grostl}{}
-Gauravaram1, P., Knudsen, L.R., Matusiewicz, K., Mendel, F., et al.,
-2011. Grøstl -- a sha-3 candidate. Available at:
-\url{http://www.groestl.info/Groestl.pdf}.
-
-\hypertarget{ref-PIVX}{}
-Jakiman, 2017. PIVX purple paper. Available at:
-\url{https://pivx.org/wp-content/uploads/2017/03/PIVX-purple-paper-Technincal-Notes.pdf}.
 
 \hypertarget{ref-InstantSend}{}
 Kiraly, B., 2017a. InstantSend. Available at:
@@ -1301,6 +1242,11 @@ Kiraly, B., 2017a. InstantSend. Available at:
 \hypertarget{ref-PrivateSend}{}
 Kiraly, B., 2017b. PrivateSend. Available at:
 \url{https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146924/PrivateSend}.
+
+\hypertarget{ref-Zerocoin}{}
+Miers, C.G., Ian; Garman, 2013. Zerocoin: Anonymous distributed e-cash
+from bitcoin. Available at:
+\url{http://spar.isi.jhu.edu/~mgreen/ZerocoinOakland.pdf}.
 
 \hypertarget{ref-Bitcoin}{}
 Nakamoto, S., 2009. Bitcoin: A peer-to-peer electronic cash system.
@@ -1313,9 +1259,5 @@ Okupski, K., 2016. Bitcoin developer reference., pp.3--4. Available at:
 \hypertarget{ref-Sporks}{}
 Strophy, 2017. Understanding sporks. Available at:
 \url{https://dashpay.atlassian.net/wiki/spaces/DOC/pages/128319489/Understanding+Sporks}.
-
-\hypertarget{ref-JH}{}
-Wu, H., 2012. The hash function jh. Available at:
-\url{http://www3.ntu.edu.sg/home/wuhj/research/jh/jh_round3.pdf}.
 
 \end{document}
